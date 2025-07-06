@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miguelvasquez.dev - Portafolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="main-content">
+        <header id="mainHeader" class="text-center p-4 full-screen">
+            <h1 class="fade-in"  data-translate="greeting">Bienvenido/a</h1>
+            <p class="fade-in" data-translate="description">Descubre mis proyectos y habilidades como desarrollador de software.</p>
+            <button id="modeToggle" class="btn btn-dark">
+                <i class="fas fa-sun" style="font-size: 1.5em;"></i>
+                <i class="fas fa-moon btn" style="font-size: 1.5em; display: none;"></i> 
+            </button>
+         <!-- Menu Toggle Button -->
+         <button class="menu-toggle" id="menuToggle">
+            <i class="bi bi-list"></i> <!-- Icono de tres líneas -->
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div id="menu" class="mt-4">
+            <a href="#biografia" data-translate="biography">Biografía</a>
+            <a href="#lenguajes" data-translate="programing languages">Lenguajes de Programación</a>
+            <a href="#repositorios" data-translate="repositories">Repositorios</a>
+            <a href="#certificados" data-translate="certificates">Certificados</a>
+            <a href="#contacto" data-translate="contact">Contacto</a>
+            <button id="languageButton" class="nav-link" data-translate="language">🌍 Idioma</button>
+                <select id="languageSelect" style="display: none;">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                </select>         
+        </div>
+        </header>
+        
+    <!-- Botón Volver Arriba -->
+        <button id="scrollTopBtn" class="btn btn-primary">
+            <i class="bi bi-house-door"></i>
+        </button>
+
+    <!-- Biografía -->
+    <section id="biografia" class="container my-5 full-screen">
+    <h2 class="text-center fade-in" data-translate="biography">Biografía</h2>
+    <div class="row align-items-center">
+        <div class="col-md-6 text-center fade-in">
+            <img id="bioImage" src="images/Logo claro.png" alt="Imagen Biografía" class="img-fluid fixed-size">
+        </div>
+        <div class="col-md-6 fade-in">
+            <p data-translate="biography (text.1)">
+                Soy Miguel Alejandro Vásquez Lara, un apasionado desarrollador de software con experiencia en múltiples lenguajes y tecnologías. Me especializo en la creación de aplicaciones web y soluciones digitales que impactan positivamente a las empresas y usuarios. Mi enfoque es siempre mejorar la calidad del software a través de metodologías ágiles y buenas prácticas de desarrollo.
+            </p>
+            <p data-translate="biography (text.2)">
+                A lo largo de mi carrera he trabajado con tecnologías como Java, Python, C#, y SQL, entre otras. Mi pasión por la programación y la innovación me ha llevado a participar en diversos proyectos, desde soluciones para la automatización de procesos hasta aplicaciones móviles para mejorar la experiencia del usuario. Siempre busco aprender y aplicar nuevas herramientas que me permitan mejorar como profesional.
+            </p>
+        </div>
+    </div>
+    </section>
+
+    <!-- Lenguajes -->
+    <section id="lenguajes" class="container my-5 full-screen fade-in">
+        <h2 class="text-center fade-in" data-translate="programing languages">Lenguajes de Programación</h2>
+        <div class="language-grid">
+            <img src="images/Java.png" alt="Java">
+            <img src="images/Python.png" alt="Python">
+            <img src="images/Csharp.png" alt="C#">
+            <img src="images/SQL.png" alt="SQL">
+            <img src="images/Html5.png" alt="HTML" id="htmlImg">
+            <img src="images/Css3.png" alt="CSS" id="cssImg">
+            <img src="images/Javascript.png" alt="JavaScript" id="jsImg">
+        </div>
+    </section>
+
+    <!-- Repositorios -->
+    <section id="repositorios" class="container my-5 full-screen fade-in">
+        <h2 class="text-center fade-in" data-translate="repositories">Repositorios</h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 language-card">
+                    <div class="card-body">
+                        <h5 class="card-title" data-translate="inventory system">Sistema de Inventario</h5>
+                        <p class="card-text"  data-translate="inventory system description">Gestión de inventario con ASP.NET Core y SQL Server.</p>
+                        <a href="https://github.com/2003-Miguel/Integracion-Open-Source-Propietaria.git" target="_blank" class="btn btn-primary"  data-translate="view on GitHub">Ver en GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 language-card">
+                    <div class="card-body">
+                        <h5 class="card-title" data-translate="user management">Gestion de Usuarios</h5>
+                        <p class="card-text" data-translate="user management description">API REST para la gestión de usuarios con Swagger y SQL Server.</p>
+                        <a href="https://github.com/2003-Miguel/Gestion-de-usuarios.git" target="_blank" class="btn btn-primary" data-translate="view on GitHub">Ver en GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 language-card">
+                    <div class="card-body">
+                        <h5 class="card-title" data-translate="finance system">Sistema de Finanzas</h5>
+                        <p class="card-text" data-translate="finance system description">Web service para intercambio de información de nómina.</p>
+                        <a href="https://github.com/2003-Miguel/Propietaria.git" class="btn btn-primary" data-translate="view on GitHub">Ver en GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+               <div class="card h-100 language-card">
+                  <div class="card-body">
+                       <h5 class="card-title" data-translate="ci cd project">Proyecto de CI CD</h5>
+                       <p class="card-text" data-translate="ci cd project description">Proyecto ASP.Net para el manejo de CI CD por commits</p>
+                       <a href="https://github.com/2003-Miguel/MiAppAspNet.git" target="_blank" class="btn btn-primary" data-translate="view on GitHub">Ver en GitHub</a>
+                  </div>
+               </div>
+            </div>
+           <div class="col-md-6 col-lg-4 mb-4">
+             <div class="card h-100 language-card">
+                <div class="card-body">
+                      <h5 class="card-title" data-translate="ssds project">Proyecto SSDS</h5>
+                      <p class="card-text" data-translate="ssds project description">Sistema de intercambio de archivos entre una empresa (Ferretería Americana) y la TSS (Tesorería de la Seguridad Social)</p>
+                      <a href="https://github.com/2003-Miguel/TSS-ProyectoSDSS.git" target="_blank" class="btn btn-primary" data-translate="view on GitHub">Ver en GitHub</a>
+                </div>
+             </div>
+           </div>
+        </div>
+    </section>
+
+    <!-- Sección de Certificados -->
+<section id="certificados" class="container my-5 full-screen fade-in">
+    <h2 class="text-center fade-in" data-translate="certificates">Certificados</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="cert-card">
+                <h5 data-translate="python course">Python desde Cero</h5>
+                <p data-translate="python course description">Curso de programación en Python desde los fundamentos.</p>
+                <a href="documents/Certificado_Curso_de_Python_desde_Cero.pdf" target="_blank" data-translate="view certificate">Ver Certificado</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="cert-card">
+                <h5 data-translate="web js course">Programación Web en JavaScript</h5>
+                <p data-translate="web js course description">Curso sobre el desarrollo web con JavaScript.</p>
+                <br>
+                <a href="documents/Certificado_Curso_en_Programación_Web_en_Javascript.pdf" target="_blank" data-translate="view certificate">Ver Certificado</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="cert-card">
+                <h5 data-translate="angular course">Desarrollo Web Front-End con Angular</h5>
+                <p data-translate="angular course description">Curso de Angular para el desarrollo Front-End.</p>
+                <a href="documents/Certificado_Curso_Desarrollo_Web_Front-End_Con_Angular.pdf" target="_blank" data-translate="view certificate">Ver Certificado</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="cert-card">
+                <h5 data-translate="sql course">Diplomado de Base de Datos SQL</h5>
+                <p data-translate="sql course description">Curso de base de datos relacional con SQL y consultas avanzadas.</p>
+                <a href="documents/Certificado_Diplomado_de_Base_de_Datos_SQL.pdf" target="_blank" data-translate="view certificate">Ver Certificado</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Contacto -->
+<section id="contacto" class="container my-5 full-screen fade-in text-center">
+    <h2 class="text-center fade-in" data-translate="contact">Contactos</h2>
+    <div class="d-flex justify-content-center gap-4 mt-4">
+        <a href="https://github.com/2003-Miguel" target="_blank" class="social-icon">
+            <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/miguel-alejandro-vásquez-lara-53513724b" target="_blank" class="social-icon">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="mailto:miguelavasquezlara@gmail.com" class="social-icon">
+            <i class="bi bi-envelope"></i>
+        </a>
+    </div>
+</section>
+</div>
+
+    <footer id="mainFooter" class="text-center p-4">
+        <p>&copy; 2025 Miguel Alejandro Vásquez Lara | miguelvasquez.dev</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
